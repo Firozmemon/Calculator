@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ButtonStyles" parent="Base.Widget.AppCompat.Button">
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--<item name="android:textColor">@color/colorPrimaryDark</item>-->
+
 </resources>
