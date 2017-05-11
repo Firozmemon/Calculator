@@ -1,5 +1,6 @@
 package com.firozmemon.mycalculator;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,13 +27,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ADD, SUBTRACT, MULTIPLY, DIVIDE, NONE
     }
 
-    // Check https://github.com/Gperez88/CalculatorInputView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         tv_text = (TextView) findViewById(R.id.tv_text);
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/digital.ttf");
+        tv_text.setTypeface(font);
 
         // Default operation
         operationType = Operation.NONE;
@@ -110,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_clear:
-                tv_text.setText("");
+                tv_text.setText("0");
                 // Reset all operations and operands
                 operand1 = operand2 = null;
                 operationType = Operation.NONE;
